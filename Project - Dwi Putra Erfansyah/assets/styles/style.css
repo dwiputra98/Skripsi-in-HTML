@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+body {
+    font-family:  'Quicksand' , sans-serif;
+    font-size: 20px;
+}
+
+.mid1{
+     text-align: center;
+}
+
+.mid2{
+    text-align: center;
+    background-color: #a0829a;
+    padding: 8px;
+}
+
+.jus{
+    text-align: justify;
+}
+  
+.abs{
+   width: 50%;
+   border:solid 1px #00a2c6;
+   padding: 15px;
+   overflow: auto;
+}
+
+.abs3{
+    margin: 0 auto;
+    position: relative;
+}
+
+p{
+    text-indent: 0.3in;
+}
+
+nav a {
+    font-size: 23px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(75, 71, 71);
+}
+
+ nav a:hover {
+    font-weight: bold;
+}
+ 
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+    
+}
+
+nav {
+    background-color: #ebf1f3;
+    padding: 0.02px;
+    position: sticky;
+    top: 0;
+    border-radius: 10px;
+}
+
+.jumbotron {
+    font-size: 17px;
+    padding: 30px;
+    background-color: #6be74c;
+    text-align: center;
+    color: rgb(48, 35, 35);
+    border-radius: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+ }
+
+*{
+    box-sizing: border-box;
+}
+
+.no1{
+   float: left;
+   width: 45%;
+}
+
+.no2{
+    float: right;
+    width: 45%;
+}
+
+@media screen and (max-width: 1000px) {
+    .no1,
+    .no2{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .abs3{
+        width: 80%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        font-size: 15px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    table, th, td{
+        font-size: 12px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .side{
+        min-width: 50%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    img{
+        min-width: 90px;
+        min-height: 80px; 
+    }
+}
+
+.tbl{
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align:left;
+    margin: 0 auto;
+    width: 80%;
+}
+
+img{
+    width: 45%;
+    margin-left: 28%;
+}
+
+.img2{
+    width: 35%;
+}
+
+.side{
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    width: 35%;
+    margin: 0 auto;
+}
+
+header{
+    display: inline;
+}

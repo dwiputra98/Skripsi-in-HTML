@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Dwi Putra Erfansyah</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <div class="jumbotron">
+                <h1>PENERAPAN MODEL MIXED GEOGRAPHICALLY WEIGHTED REGRESSION PADA KASUS KEMISKINAN DI JAWA BARAT TAHUN 2019</h1>
+            </div>
+            <nav>
+                <ul class="mid1">
+                    <li><a href="#penda">Pendahuluan</a></li>
+                    <li><a href="#metod">Metode Penelitian</a></li>
+                    <li><a href="#pemba">Pembahasan</a></li>
+                    <li><a href="#kesil">Kesimpulan</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="jus">
+                <article class="abs abs3">
+                    <h2 class="mid1">ABSTRAK</h2>
+                    <p><i>Mixed Geographically Weighted Regression</i>  (MGWR) merupakan regresi yang digunakan untuk menganalisis data spasial, model ini merupakan gabungan dari model regresi linear global dan model <i>Geographically Weighted Regression</i> (GWR). Estimasi parameter yang didapatkan dari analisis ini sebagian bersifat global dan sebagian lainnya bersifat lokal
+                        Penelitian ini bertujuan untuk mendapatkan estimasi parameter model MGWR yang diaplikasikan pada pemetaan penduduk miskin yang ada di Jawa Barat pada Tahun 2019. Variabel respon yang digunakan pada penelitian ini adalah persentase penduduk miskin dan variabel bebasnya adalah Upah minimun regional (X<sub>1</sub>), Indeks pembangunan manusia (X<sub>2</sub>), Tingkat partisipasi angkatan kerja (X<sub>3</sub>), Produk Domestik Regional Bruto perkapita (X<sub>4</sub>) dan Tingkat pengangguran terbuka (X<sub>5</sub>)
+                        Dari hasil penelitian didapat bahwa model MGWR memiliki nilai AIC yang paling kecil dari regresi global dan GWR. Variabel yang mempengaruhinya adalah Upah minimun regional (X<sub>1</sub>) dan Indeks pembangunan manusia (X<sub>2</sub>), UMR berpengaruh secara global dan IPM berpengaruh secara lokal.
+                    </p>
+                    <p id="penda" ></p><br>
+                </article>
+                <br>
+                <article class="card">
+                    <h2 class="mid2">PENDAHULUAN</h2>
+                    <section>
+                        <h3>Latar Belakang</h3>
+                        <p>
+                            Data spasial memiliki sistem koordinat tertentu yang membuatnya berbeda seperti informasi lokasi (spasial) dan informasi deskriptif (atribut). Informasi lokasi berkaitan dengan suatu koordinat geografis nilai longitude (garis bujur) dan latitude (garis lintang).
+                            Data spasial tidak baik menggunakan regresi biasa karena terdapat variansi antar lokasi pengamatan atau heterogenitas spasial yang membuat parameter yang diperoleh akan memiliki ragam yang besar.
+                            Model GWR dikembangkan menjadi Mixed Geographically Weighted Regression (MGWR). Metode ini merupakan gabungan dari model regresi linier yang setiap estimasi parameternya sama setiap pengamatannya dengan model GWR.
+                        </p>
+                    </section>
+
+                    <section class="no1">
+                        <h3>Rumusan Masalah</h3>
+                        <ol>
+                            <li>Bagaimana estimasi parameter yang didapatkan dari metode Mixed Geographically Weighted Regression (MGWR) pada data kemiskinan di Provinsi Jawa Barat Tahun 2019?</li>
+                            <li>
+                                Bagaimana pengaruh setiap variabel bebas untuk setiap wilayah pada data kemiskinan di Provinsi Jawa Barat Tahun 2019?
+                            </li>
+                            <li>
+                                Bagaimana pengaruh variabel yang bersifat lokal ataupun global untuk setiap wilayah pada data kemiskinan di Provinsi Jawa Barat Tahun 2019?
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section class="no2">
+                        <h3>Tujuan Penelitian</h3>
+                        <ol>
+                            <li>Mendapatkan model dengan metode Mixed Geographically Weighted Regression (MGWR) pada data kemiskinan di Provinsi Jawa Barat Tahun 2019.</li>
+                            <li>Mengetahui variabel apa saja yang bersifat secara lokal maupun global di setiap wilayahnya pada data kemiskinan di Provinsi Jawa Barat Tahun 2019.</li>
+                            <li>Mengetahui variabel apa saja yang berpengaruh secara lokal ataupun secara global.</li>
+                        </ol>
+                    </section>
+                </article>
+                <article id="metod" class="card">
+                    <h2 class="mid2">METODE PENELITIAN</h2>
+                    <section>
+                        <h3>Sumber Data</h3>
+                        <p>Data yang digunakan adalah data sekunder yang berasal dari Badan Pusat Statistik (BPS) tentang kemiskinan yang ada di Jawa Barat pada tahun 2019. Data yang akan dipakai adalah data tentang persentase penduduk miskin yang ada di kabupaten dan kota yang ada di Jawa Barat pada tahun 2019 beserta beberapa faktor yang dianggap berpengaruh menyebabkan kemiskinan tersebut. Unit observasi pada penelitian ini adalah 18 kabupaten dan 9 kota yang ada di Jawa Barat.</p>
+                    </section>
+
+                    <section>
+                        <h3>Variabel penelitian</h3>
+                        <table class="tbl">
+                            <tr class="tbl">
+                                <th>Variabel</th>
+                                <th>Keterangan</th>
+                            </tr>
+                            <tr>
+                                <th>Persentase Penduduk Miskin (Y)</th>
+                                <td>Persentase penduduk yang berada dalam kemiskinan (dalam %)</td>
+                            </tr>
+                            <tr>
+                                <th>Upah Minimun Regional</th>
+                                <td>Standar minimum yang digunakan untuk memberikan upah</sup></td>
+                            </tr>
+                            <tr>
+                                <th>Indeks Pembangunan Manusia</th>
+                                <td>Pengukuran perbandingan dari harapan hidup, melek huruf dan pendidikan (dalam %)</td>
+                            </tr>
+                            <tr>
+                                <th>Tingkat Partisipasi Angkatan Kerja</th>
+                                <td>Rasio antara angkatan kerja dan ukurarn keseluruhan kelompok</td>
+                            </tr>
+                            <tr>
+                                <th>Produk Domestik Regional Bruto perkapita</th>
+                                <td>Jumlah nilai tambah bruto (gross value added) yang timbul dari seluruh sektor perekonomian di wilayah tersebut</td>
+                            </tr>
+                            <tr>
+                                <th>Tingkat Pengangguran Terbuka</th>
+                                <td>Rasio pengangguran terhadap jumlah angkatan kerja</td>
+                            </tr>
+                        </table>
+                        <p id="pemba" ></p><br>
+                    </section>
+                </article>
+                <article class="card">
+                    <h2 class="mid2">PEMBAHASAN</h2>
+                    <p>data yang akan digunakan sebagai berikut :</p>
+                    <img src="assets/image/data.png" alt="data">
+                    <h3>Data Eksplorasi</h3>
+                    <section>
+                        <h4>Persentase Kemiskinan</h4>
+                        <img src="assets/image/Kemiskinan.png" alt="data kemiskinan">
+                        <p>terdapat 3 wilayah yang persentase kemiskinannya melebihi 10% yaitu Kuningan, Indramayu dan Kota Tasikmalaya.Kota Depok dengan persentase hanya sebesar 2,07% saja dari keseluruhan penduduknya</p>
+                    </section>
+                    <section>
+                        <h4>Upah Minimun Regional</h4>
+                        <img src="assets/image/umr.png" alt="data umr">
+                        <p>UMR yang paling besar di Jawa Barat Tahun 2019 dipegang oleh wilayah karawang sebesar Rp. 4.234.010 dan paling kecil di antara wilayah yang lain adalah wilayah Kota Banjar sebesar Rp. 1.688.217. Rata-rata UMR di Jawa Barat Tahun 2019 sebesar Rp. 2.731.766. </p>
+                    </section>
+                    <section>
+                        <h4>Indeks Pembangunan Manusia</h4>
+                        <img src="assets/image/IPM.png" alt="data IPM">
+                        <p> terdapat 3 wilayah dengan IPM tertinggi yaitu Kota Bandung, Kota Bekasi dan Kota Depok untuk IPM terendah adalah Cianjur sebesar 65,38% berbeda hampir 16% dari wilayah dengan tingkat IPM tertinggi. Rata-rata IPM di Jawa Barat Tahun 2019 sebesar 71,64%.</p>
+                    </section>
+                    <section>
+                        <h4>Tingkat Partisipasi Angkatan Kerja</h4>
+                        <img src="assets/image/tpak.png" alt="data tpak">
+                        <p>TPAK yang tertinggi dipegang oleh wilayah Pangandaran sebesar 75,18% yang berbeda cukup jauh dengan wilayah yang lainnya. Wilayah dengan nilai TPAK terkecil adalah wilayah Kuningan yang hanya sebesar 61,31%. Rata-rata TPAK di Jawa Barat Tahun 2019 sebesar 65,26%.</p>
+                    </section>
+                    <section>
+                        <h4>Produk Domestik Regional Bruto perkapita</h4>
+                        <img src="assets/image/pdrb.png" alt="data pdrb">
+                        <p> PDRB perkapita terbesar dipegang oleh wilayah Kota Bandung yang mencapai Rp. 78.808.425,7 dan yang terkecil adalah wilayah Tasikmalaya yang hanya sebesar Rp. 14016644,4 berbeda hampir lima kali lipat dengan wilayah terbesar. Rata-rata PDRB perkapita di Jawa Barat Tahun 2019 sebesar Rp. 28950421,8</p>
+                    </section>
+                    <section>
+                        <h4>Tingkat Pengangguran Terbuka</h4>
+                        <img src="assets/image/tpt.png" alt="data tpt">
+                        <p>TPT tertinggi adalah Cirebon sebesar 10,28% dan wilayah dengan TPT terkecil adalah wilayah Majalengka dengan persentase TPTnya hanya sebesar 4,37% saja. Rata-rata persentase TPT di Jawa Barat sebesar 7,79%.</p>
+                    </section>
+                    <h3>Regresi Linear</h3>
+                    <section>
+                        <h4>Uji Simultan</h4>
+                        <b>H<sub>0</sub>: &#946;<sub>0</sub>= &#946;<sub>1</sub>= &#946;<sub>2</sub> =...= 0 </b>atau variabel bebas tidak mempengaruhi model<br>
+                        <b>H<sub>1</sub></b> :Terdapat minimal 1 <b> &#946;<sub>p</sub> &#8800; 0 </b>atau variabel bebas mempengaruhi model. <br>
+                        <p>didapatkan p-value sebesar 0,000 dengan tingkat signifikansi sebesar &#945; = 0,05, karena lebih kecil dari &#945; maka H<sub>0</sub> ditolak dapat disimpulkan bahwa minimal ada satu variabel bebas mempengaruhi model atau model signifikan.</p>
+                    </section>
+                    <section>
+                        <h4>Uji Parsial</h4>
+                        <b>H<sub>0</sub>: &#946;<sub>p</sub> = 0 </b><br>
+                        <b>H<sub>1</sub> : &#946;<sub>p</sub> &#8800 0 </b><br>
+                        <img src="assets/image/up.png" alt="up"><br>
+                        <p>Pengujian parameter secara parsial menggunakan tingkat signifikansi sebesar 5 %. Maka dapat disimpulkan bahwa variabel yang mempengaruhi model adalah variabel UMR dan variabel IPM.</p>
+                    </section>
+                    <h3>Geographically Weighted Regression</h3>
+                    <section>
+                        <h4>Uji Simultan</h4>
+                        <b>H<sub>0</sub>: &#946;<sub>0</sub>(u<sub>1</sub>,v<sub>1</sub>)= &#946;<sub>1</sub>(u<sub>2</sub>,v<sub>2</sub>) =...= &#946;<sub>k</sub>(u<sub>n</sub>,v<sub>n</sub>) = 0 </b>atau tidak ada perbedaan yang signifikan antara model regresi global dengan model GWR<br>
+                        <b>H<sub>1</sub> : </b>Terdapat minimal 1 <b>&#946;<sub>p</sub>(u<sub>n</sub>,v<sub>n</sub>) &#8800 0 </b>atau terdapat perbedaan yang signifikan antara model regresi global dengan model GWR. <br>
+                        <img src="assets/image/usgwr.png" alt=""><br>
+                        <p>Berdasarkan F-tabel didapatkan nilai 1,786. Dengan demikian dapat diambil keputusan bahwa H<sub>0</sub> diterima maka tidak terdapat perbedaan yang signifikan antara model regresi global dengan model GWR.</p>
+                    </section>
+                    <h3>Mixed Geographically Weighted Regression</h3>
+                    <section>
+                        <h4>Uji Simultan</h4>
+                        <b>H<sub>0</sub>: &#946;<sub>p</sub>(u<sub>n</sub>,v<sub>n</sub>)= &#946;<sub>p</sub> </b>tidak ada perbedaan yang signifikan antara model regresi global dengan MGWR. <br>
+                        <b>H<sub>1</sub> : </b>Terdapat minimal p <b>&#946;<sub>p</sub>(u<sub>n</sub>,v<sub>n</sub>) &#8800 0</b> ada perbedaan yang signifikan antara model regresi global dengan MGWR. <br>
+                        <img src="assets/image/usmgwr.png" alt=""><br>
+                        <p>Berdasarkan F-tabel didapatkan nilai 1,786. Dengan demikian dapat diambil keputusan bahwa H<sub>0</sub> diterima maka tidak terdapat perbedaan yang signifikan antara model regresi global dengan model MGWR.</p>
+                        <p>Berdasarkan hasil analisis di dapatkan model sebagai berikut:</p>
+                        <img src="assets/image/mgwr.png" class="img2" alt="">
+                        <p>dari 27 wilayah di Jawa Barat terdapat persamaan variabel yang mempengaruhi kemiskinan yaitu variabel UMR dan variabel IPM yang berpengaruh di antara variabel lainnya yang diteliti pada penelitian ini. Jika diambil satu contoh model pada lokasi pertama (u<sub>1</sub>,v<sub>1</sub>) yaitu Bogor mendapatkan nilai sebesar :</p>
+                        <p class="mid1">&ycirc; = 29,7068 - 0,000001(3763405) - 0,2765(70,65)</p>
+                        <p>Interpretasi:</p>
+                        <p>- Jika UMR wilayah Bogor naik sebesar Rp.1.000.000 maka persentase kemiskinan akan turun sebesar 1% ketika variabel lain dianggap konstan.</p>
+                        <p>- Jika IPM wilayah Bogor naik sebesar 10% maka persentase kemiskinan akan turun sebesar 2,7% ketika variabel lain dianggap konstan.</p>
+                    
+                    </section>
+                    <h3>Pemilihan Model Terbaik</h3>
+                    <p>Berdasarkan 3 model yang telah dianalisis berikut adalah nilai AIC antara model regresi global, model GWR dan model MGWR yang disajikan dalam tabel di bawah:</p>
+                    <img src="assets/image/aic.png" class="img2" alt="">
+                    <p>Berdasarkan tabel diatas dapat diketahui bahwa dari 3 jenis metode yang digunakan menunjukan bahwa nilai AIC model MGWR lebih kecil dibandingkan nilai AIC model yang lainnya yaitu sebesar 108,1389. Jadi model MGWR adalah model terbaik untuk memodelkan data kemiskinan di Jawa Barat Tahun 2019</p>
+                    <p id="kesil" ></p><br>
+                </article>
+                
+                <article class="card">
+                    <h2 class="mid2">Kesimpulan</h2>
+                    <p>Berdasarkan hasil dari pembahasan yang telah dilakukan, maka dapat disimpulkan bahwa:</p>
+                    <ol>
+                        <li>Dari hasil analisis didapat bahwa model yang terbaik dengan memiliki nilai AIC terkecil adalah metode MGWR dengan nilai AIC sebesar 108,1389 walaupun hanya berbeda sedikit tetapi lebih kecil dibandingkan metode regresi dan metode GWR.</li>
+                        <li>Dari hasil analisis didapat bahwa variabel bebas yang bersifat global atau memiliki nilai estimasi yang sama setiap wilayahnya adalah Upah Minimum Regional (X<sub>1</sub>), Produk Domestik Regional Bruto perkapita (X<sub>4</sub>) dan Tingkat Pengangguran Terbuka (X<sub>5</sub>).</li>
+                        <li>Dari hasil analisis didapat bahwa variabel bebas yang bersifat lokal adalah Indeks Pembangunan Manusia (X<sub>2</sub>) dan Tingkat Partisipasi Angkatan Kerja (X<sub>3</sub>).</li>
+                        <li>Berdasarkan hasil analisis variabel yang signifikan mempengaruhi persentase kemiskinan di Jawa Barat Tahun 2019 adalah Upah Minimum Regional (X<sub>1</sub>) yang bersifat global dan Indeks Pembangunan Manusia (X<sub>2</sub>) yang bersifat lokal</li>
+                    </ol>
+                </article>
+            </div>
+
+            <aside class="side">
+                <article>
+                    <header>
+                        <img src="assets/image/foto.png" alt="">
+                    </header>
+                    <section>
+                        <h2 class="mid1">Biodata Diri</h2>
+                        <table>
+                            <tr>
+                                <td>Nama</td>
+                                <td> :</td>
+                                <td>Dwi Putra Erfansyah</td>
+                            </tr>
+                            <tr>
+                                <td>Agama</td>
+                                <td> :</td>
+                                <td>Islam</td>
+                            </tr>
+                            <tr>
+                                <td>Umur</td>
+                                <td> :</td>
+                                <td>24 Tahun</td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td> :</td>
+                                <td>kabupaten Bandung</td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </aside>
+        </main>
+    </body>
+</html>
